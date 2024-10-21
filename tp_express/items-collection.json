@@ -1,0 +1,94 @@
+{
+  "info": {
+    "name": "Items API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create a new item",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"New Item\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/items",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["items"]
+        }
+      }
+    },
+    {
+      "name": "Retrieve all items",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/items",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["items"]
+        }
+      }
+    },
+    {
+      "name": "Retrieve a specific item",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/items/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["items", "1"]
+        }
+      }
+    },
+    {
+      "name": "Update an item",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"Updated Item\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/items/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["items", "1"]
+        }
+      }
+    },
+    {
+      "name": "Delete an item",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:3000/items/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["items", "1"]
+        }
+      }
+    }
+  ]
+}
+
