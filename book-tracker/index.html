@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Reading Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="dist/app.js" defer></script>
+    <style>
+        .progress-bar {
+            width: 100%;
+            background-color: #eee;
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .progress {
+            height: 100%;
+            background-color: #4CAF50;
+            transition: width 0.3s ease;
+        }
+        .book-card {
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-8">Book Reading Tracker</h1>
+
+        <div id="stats" class="bg-white p-4 rounded-lg shadow mb-8">
+            <!-- Stats will be inserted here -->
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow mb-8">
+            <h2 class="text-xl font-bold mb-4">Add New Book</h2>
+            <form id="bookForm" class="grid grid-cols-2 gap-4">
+                <div>
+                    <label>Title</label>
+                    <input type="text" name="title" required class="w-full p-2 border rounded">
+                </div>
+                <div>
+                    <label>Author</label>
+                    <input type="text" name="author" required class="w-full p-2 border rounded">
+                </div>
+                <div>
+                    <label>Number of Pages</label>
+                    <input type="number" name="numberOfPages" required class="w-full p-2 border rounded">
+                </div>
+                <div>
+                    <label>Pages Read</label>
+                    <input type="number" name="pagesRead" required class="w-full p-2 border rounded">
+                </div>
+                <div>
+                    <label>Price</label>
+                    <input type="number" name="price" required class="w-full p-2 border rounded">
+                </div>
+                <div>
+                    <label>Status</label>
+                    <select name="status" required class="w-full p-2 border rounded">
+                        <option value="Read">Read</option>
+                        <option value="Re-read">Re-read</option>
+                        <option value="DNF">DNF</option>
+                        <option value="Currently reading">Currently reading</option>
+                        <option value="Returned Unread">Returned Unread</option>
+                        <option value="Want to read">Want to read</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Format</label>
+                    <select name="format" required class="w-full p-2 border rounded">
+                        <option value="Print">Print</option>
+                        <option value="PDF">PDF</option>
+                        <option value="Ebook">Ebook</option>
+                        <option value="AudioBook">AudioBook</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Suggested By</label>
+                    <input type="text" name="suggestedBy" required class="w-full p-2 border rounded">
+                </div>
+                <button type="submit" class="col-span-2 bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+                    Add Book
+                </button>
+            </form>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-bold mb-4">My Books</h2>
+            <div id="booksList">
+                <!-- Books will be inserted here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
