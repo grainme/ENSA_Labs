@@ -1,0 +1,7 @@
+org\codefromscratch\App\DAO\IProfessorDAO.class
+org\codefromscratch\App\App.class
+org\codefromscratch\App\Services\ProfesseurService.class
+org\codefromscratch\App\DAO\ProfesseurDAOImpl.class
+org\codefromscratch\Main.class
+org\codefromscratch\App\Beans\Professor.class
+org\codefromscratch\App\Services\ProfesseurServiceImpl.class
